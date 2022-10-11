@@ -9,6 +9,8 @@ import UIKit
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
+  private let photoPermissionManager = PhotoPermissionManager()
+
   var window: UIWindow?
 
   func application(
@@ -16,8 +18,24 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = ViewController()
+    window?.rootViewController = makeNavigationController(with: makeViewController())
     window?.makeKeyAndVisible()
     return true
+  }
+}
+
+private extension AppDelegate {
+  func makeViewController() -> UIViewController {
+    if photoPermissionManager.isPhotoPermissionAccepted() {
+      return PhotoGalleryViewController()
+    } else {
+      return PhotoPermissionViewController()
+    }
+  }
+
+  func makeNavigationController(with viewController: UIViewController) -> UINavigationController {
+    let navigationController = UINavigationController(rootViewController: viewController)
+    navigationController.isNavigationBarHidden = true
+    return navigationController
   }
 }

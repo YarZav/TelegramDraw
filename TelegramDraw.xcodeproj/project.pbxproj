@@ -3,20 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		062AD43F252EDC180A58C4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E7D1E671D6914EA5F5C798 /* LaunchScreen.storyboard */; };
 		245161BD19FA3CFE184CAAF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8B3EFD792E132E56B696EF /* Assets.xcassets */; };
-		45FD4E01FEC0F6B8AE145EB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5581EA92C34E679ED1A18 /* ViewController.swift */; };
+		B8039DA528F604B40034C6C6 /* PhotoPermissionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8039DA428F604B40034C6C6 /* PhotoPermissionButton.swift */; };
+		B803A06D28F6057D0034C6C6 /* PhotoPermissionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803A06C28F6057D0034C6C6 /* PhotoPermissionManagerProtocol.swift */; };
+		B803A06F28F606170034C6C6 /* PhotoPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803A06E28F606170034C6C6 /* PhotoPermissionManager.swift */; };
+		B803A07228F6111C0034C6C6 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803A07128F6111C0034C6C6 /* PhotoGalleryViewController.swift */; };
+		B89CBBA528F5F4760020B2E5 /* PhotoPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CBBA428F5F4760020B2E5 /* PhotoPermissionViewController.swift */; };
 		E7D090F9754649DC8BF143A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11842FE3ED1A624B5E6EF1E /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4386F0C0F0D82D17B586928E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4CA5581EA92C34E679ED1A18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A407D74F101F9A6C8F4402D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8039DA428F604B40034C6C6 /* PhotoPermissionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionButton.swift; sourceTree = "<group>"; };
+		B803A06C28F6057D0034C6C6 /* PhotoPermissionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionManagerProtocol.swift; sourceTree = "<group>"; };
+		B803A06E28F606170034C6C6 /* PhotoPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionManager.swift; sourceTree = "<group>"; };
+		B803A07128F6111C0034C6C6 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		B89CBBA428F5F4760020B2E5 /* PhotoPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionViewController.swift; sourceTree = "<group>"; };
 		CD8B3EFD792E132E56B696EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6BBE4866AA0DEA3EE662ED /* GitHubExample.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GitHubExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11842FE3ED1A624B5E6EF1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +41,48 @@
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
+		B8039DA328F604AD0034C6C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8039DA428F604B40034C6C6 /* PhotoPermissionButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B803A06A28F605660034C6C6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B803A06B28F605720034C6C6 /* PhotoPermissionManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B803A06B28F605720034C6C6 /* PhotoPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				B803A06C28F6057D0034C6C6 /* PhotoPermissionManagerProtocol.swift */,
+				B803A06E28F606170034C6C6 /* PhotoPermissionManager.swift */,
+			);
+			path = PhotoPermissionManager;
+			sourceTree = "<group>";
+		};
+		B803A07028F611120034C6C6 /* PhotoGallery */ = {
+			isa = PBXGroup;
+			children = (
+				B803A07128F6111C0034C6C6 /* PhotoGalleryViewController.swift */,
+			);
+			path = PhotoGallery;
+			sourceTree = "<group>";
+		};
+		B89CBBA328F5F4500020B2E5 /* PhotoPermission */ = {
+			isa = PBXGroup;
+			children = (
+				B8039DA328F604AD0034C6C6 /* Components */,
+				B89CBBA428F5F4760020B2E5 /* PhotoPermissionViewController.swift */,
+			);
+			path = PhotoPermission;
+			sourceTree = "<group>";
+		};
 		C4B19C7D47E892324653F2F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -44,11 +94,13 @@
 		DC267D474EB8587F33D9FD6A /* TelegramDraw */ = {
 			isa = PBXGroup;
 			children = (
+				B803A07028F611120034C6C6 /* PhotoGallery */,
+				B803A06A28F605660034C6C6 /* Managers */,
+				B89CBBA328F5F4500020B2E5 /* PhotoPermission */,
 				D11842FE3ED1A624B5E6EF1E /* AppDelegate.swift */,
 				CD8B3EFD792E132E56B696EF /* Assets.xcassets */,
 				4386F0C0F0D82D17B586928E /* Info.plist */,
 				64E7D1E671D6914EA5F5C798 /* LaunchScreen.storyboard */,
-				4CA5581EA92C34E679ED1A18 /* ViewController.swift */,
 			);
 			path = TelegramDraw;
 			sourceTree = "<group>";
@@ -119,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B803A06F28F606170034C6C6 /* PhotoPermissionManager.swift in Sources */,
 				E7D090F9754649DC8BF143A9 /* AppDelegate.swift in Sources */,
-				45FD4E01FEC0F6B8AE145EB4 /* ViewController.swift in Sources */,
+				B8039DA528F604B40034C6C6 /* PhotoPermissionButton.swift in Sources */,
+				B89CBBA528F5F4760020B2E5 /* PhotoPermissionViewController.swift in Sources */,
+				B803A07228F6111C0034C6C6 /* PhotoGalleryViewController.swift in Sources */,
+				B803A06D28F6057D0034C6C6 /* PhotoPermissionManagerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
+  <true/>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>$(PRODUCT_NAME) whats to use your photos</string>
   <key>BGTaskSchedulerPermittedIdentifiers</key>
   <array>
     <string>ru.YZ.TelegramDraw</string>
@@ -9,7 +13,7 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>$(DEVELOPMENT_LANGUAGE)</string>
   <key>CFBundleDisplayName</key>
-  <string>GitHub</string>
+  <string>TelegramDraw</string>
   <key>CFBundleExecutable</key>
   <string>$(EXECUTABLE_NAME)</string>
   <key>CFBundleIdentifier</key>
